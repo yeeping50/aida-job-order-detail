@@ -15,10 +15,10 @@ db_schema:
     server: full
     columns:
     - name: jobordernumber
-      admin_ui: {order: 0, width: 200}
+      admin_ui: {order: 0, width: 152}
       type: string
     - name: joborderstatus
-      admin_ui: {width: 200, order: 1}
+      admin_ui: {order: 1, width: 138}
       type: string
     - name: kitted
       admin_ui: {width: 200, order: 3}
@@ -30,7 +30,7 @@ db_schema:
       admin_ui: {width: 200, order: 5}
       type: media
     - name: numberofitem
-      admin_ui: {order: 2, width: 200}
+      admin_ui: {order: 2, width: 118}
       type: number
     title: Table1
 renamed: true

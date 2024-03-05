@@ -15,10 +15,10 @@ class Form1(Form1Template):
     jobordernumber = self.order_box.text
     joborderstatus = self.status_box.text
     numberofitem = int(self.number_box.text)
-    #kitted = self.kitted_box.text
-    #percentage = {kitted}/{numberofitem}
+    kitted = int(self.kitted_box.text)
+    percentage = percentage
     #picture = download()
-    anvil.server.call('add_form1', jobordernumber,joborderstatus,numberofitem)
+    anvil.server.call('add_form1', jobordernumber,joborderstatus,numberofitem,kitted,percentage)
 
 
     
