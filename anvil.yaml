@@ -1,11 +1,35 @@
-allow_embedding: false
-package_name: Aida_Job_Order_Detail
-name: Aida Job Order Detail
-startup_form: Form1
-renamed: true
-runtime_options: {version: 2, client_version: '3', server_version: python3-full, server_spec: null}
 dependencies: []
 services:
 - source: /runtime/services/tables.yml
   client_config: {}
   server_config: {}
+package_name: Aida_Job_Order_Detail
+allow_embedding: false
+name: Aida Job Order Detail
+runtime_options: {version: 2, client_version: '3', server_version: python3-full, server_spec: null}
+startup_form: Form1
+db_schema:
+  table1:
+    client: none
+    server: full
+    columns:
+    - name: jobordernumber
+      admin_ui: {order: 0, width: 200}
+      type: string
+    - name: joborderstatus
+      admin_ui: {width: 200, order: 1}
+      type: string
+    - name: numberofitem
+      admin_ui: {width: 200, order: 2}
+      type: bool
+    - name: kitted
+      admin_ui: {width: 200, order: 3}
+      type: number
+    - name: percentage
+      admin_ui: {width: 200, order: 4}
+      type: number
+    - name: picture
+      admin_ui: {width: 200, order: 5}
+      type: media
+    title: Table1
+renamed: true
