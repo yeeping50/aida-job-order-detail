@@ -6,7 +6,7 @@ from datetime import datetime
 
 @anvil.server.callable
 def add_form1(name, email, feedback):
-  app_tables.feedback.add_row(
+  app_tables.table1.add_row(
     joborderstatus=joborderstatus, 
     numberofitem=numberofitem, 
     percentage=percentage, 

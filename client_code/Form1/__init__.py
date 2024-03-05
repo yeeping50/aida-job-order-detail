@@ -17,4 +17,7 @@ class Form1(Form1Template):
     kitted = self.kitted_box.text
     percentage = kitted/numberofitem
     picture = download()
+    anvil.server.call('add_form1', joborderstatus, numberofitem, kitted)
+
+
     
