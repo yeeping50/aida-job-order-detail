@@ -16,7 +16,7 @@ class Form1(Form1Template):
     joborderstatus = self.status_box.text
     numberofitem = int(self.number_box.text)
     kitted = int(self.kitted_box.text)
-    percentage = percentage
+    percentage = kitted/numberofitem
     #picture = download()
     anvil.server.call('add_form1', jobordernumber,joborderstatus,numberofitem,kitted,percentage)
 
