@@ -3,12 +3,13 @@ services:
 - source: /runtime/services/tables.yml
   client_config: {}
   server_config: {}
+startup: {type: form, module: view}
 package_name: Aida_Job_Order_Detail
 allow_embedding: false
 name: Aida Job Order Detail
 runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
   server_spec: null}
-startup_form: Form1
+startup_form: null
 db_schema:
   table1:
     client: none

@@ -15,3 +15,8 @@ def add_form1(jobordernumber,joborderstatus,numberofitem,kitted,percentage,file)
     file = file
   )
 
+def get_joborder():
+  # Get a list of articles from the Data Table, sorted by 'created' column, in descending order
+  return app_tables.table1.search(
+    tables.order_by("jobordernumber", ascending=False)
+  )

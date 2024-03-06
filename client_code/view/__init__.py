@@ -10,4 +10,11 @@ class view(viewTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
+  def refresh_articles(self):
+    # Load existing articles from the Data Table, 
+    # and display them in the RepeatingPanel
+    self.label_2 = anvil.server.call('get_joborder')
+    self.refresh_articles()
+    print(self.label_2)
+
     # Any code you write here will run before the form opens.
