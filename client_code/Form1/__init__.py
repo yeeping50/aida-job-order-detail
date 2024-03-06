@@ -10,6 +10,10 @@ class Form1(Form1Template):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
+  def file_loader_1_change(self, file, **event_args):
+    file = self.file_loader_1
+  
+
   def button_click(self, **event_args):
     
     jobordernumber = self.order_box.text
@@ -17,8 +21,8 @@ class Form1(Form1Template):
     numberofitem = int(self.number_box.text)
     kitted = int(self.kitted_box.text)
     percentage = kitted/numberofitem
-    #picture = download()
-    anvil.server.call('add_form1', jobordernumber,joborderstatus,numberofitem,kitted,percentage)
+    file = self.file_loader_1
+    anvil.server.call('add_form1', jobordernumber,joborderstatus,numberofitem,kitted,percentage,file)
 
 
     

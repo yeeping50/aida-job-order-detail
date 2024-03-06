@@ -21,13 +21,13 @@ db_schema:
       admin_ui: {order: 1, width: 138}
       type: string
     - name: kitted
-      admin_ui: {width: 200, order: 3}
+      admin_ui: {order: 3, width: 113}
       type: number
     - name: percentage
-      admin_ui: {width: 200, order: 4}
+      admin_ui: {order: 4, width: 106}
       type: number
-    - name: picture
-      admin_ui: {width: 200, order: 5}
+    - name: file
+      admin_ui: {order: 5, width: 127}
       type: media
     - name: numberofitem
       admin_ui: {order: 2, width: 118}

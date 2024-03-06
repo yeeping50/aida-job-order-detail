@@ -54,18 +54,19 @@ components:
       properties: {text: Percentage kitted}
       type: Label
       layout_properties: {grid_position: 'EQAZMC,DGCVZH'}
-    - name: percentage_box
+    - name: percent_label
       properties: {}
-      type: TextBox
-      layout_properties: {grid_position: 'EQAZMC,NFUKHC'}
+      type: Label
+      layout_properties: {grid_position: 'EQAZMC,DYMMEX'}
     - name: label_12
       properties: {text: Delivery proof picture}
       type: Label
       layout_properties: {grid_position: 'OPXSAC,YQPZPR'}
-    - name: image_1
+    - name: file_loader_1
       properties: {}
-      type: Image
-      layout_properties: {grid_position: 'OPXSAC,NVHDXM'}
+      type: FileLoader
+      layout_properties: {grid_position: 'OPXSAC,JICQMI'}
+      event_bindings: {change: file_loader_1_change}
     - name: button
       properties: {text: submit, role: outlined-button}
       type: Button
