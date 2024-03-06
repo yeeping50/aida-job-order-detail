@@ -11,7 +11,7 @@ def add_form1(jobordernumber,joborderstatus,numberofitem,kitted,percentage,file)
     joborderstatus=joborderstatus, 
     numberofitem=numberofitem,
     kitted=kitted,
-    percentage=kitted/numberofitem, 
-    #file = file
+    percentage=(kitted/numberofitem)*100, 
+    file = file
   )
 
