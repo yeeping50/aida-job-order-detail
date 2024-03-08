@@ -33,6 +33,7 @@ components:
         data_bindings:
         - {property: items, code: 'self.item[''jobordernumber'']', writeback: false}
         - {property: tag, code: 'self.item[''numberofitem'']', writeback: false}
+        - {property: item_template, code: 'self.item[''jobordernumber'']', writeback: false}
       layout_properties: {grid_position: 'DIAUQW,PERQMO'}
       data_bindings:
       - {property: tag, code: 'self.item[''joborderstatus'']', writeback: false}
