@@ -11,12 +11,20 @@ class ItemTemplate1(ItemTemplate1Template):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
-    # Any code you write here will run before the form opens.
-
   def button_1_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    alert(
-      content=Form1(),
+    # Create a copy of the existing article from the Data Table 
+    article_copy = dict(self.item)
+    # Open an alert displaying the 'ArticleEdit' Form
+    # set the `self.item` property of the ArticleEdit Form to a copy of the article to be updated
+    save_clicked = alert(
+      content=Form1(item=article_copy),
       title="Update Article",
-      large=True
+      large=True,
+      buttons=[("Save", True), ("Cancel", False)]
     )
+    # Update the article if the user clicks save
+    if save_clicked:
+      anvil.server.call('add_form1', self.item, article_copy)
+
+      # Now refresh the page
+      self.refresh_data_bindings()

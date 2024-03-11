@@ -46,3 +46,5 @@ components:
   type: Button
   layout_properties: {grid_position: 'GGZNES,SOMYMX'}
   event_bindings: {click: button_1_click}
+  data_bindings:
+  - {property: tag, code: 'self.item['''']', writeback: false}
