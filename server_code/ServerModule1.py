@@ -21,7 +21,7 @@ def get_joborder():
 @anvil.server.callable
 def update_article(article, article_dict):
   # check that the article given is really a row in the ‘articles’ table
-  if app_tables.table1.has_row(article):
+  if app_tables.table1.has_row(tables):
     article_dict['updated'] = datetime.now()
     article.update(**article_dict)
   else:
