@@ -1,0 +1,43 @@
+is_package: true
+container: {type: ColumnPanel}
+components:
+- name: label_2
+  properties: {text: Job Order Number}
+  type: Label
+  layout_properties: {grid_position: 'GGZNES,LHHSKS'}
+- name: label_1
+  properties: {}
+  type: Label
+  layout_properties: {grid_position: 'GGZNES,HPXUGE'}
+  data_bindings:
+  - {property: text, code: 'self.item[''jobordernumber'']', writeback: false}
+- name: label_3
+  properties: {text: Job Order Status}
+  type: Label
+  layout_properties: {grid_position: 'GGZNES,FFKYDK'}
+- name: label_4
+  properties: {}
+  type: Label
+  layout_properties: {grid_position: 'GGZNES,FCTNSA'}
+  data_bindings:
+  - {property: text, code: 'self.item[''joborderstatus'']', writeback: false}
+- name: label_5
+  properties: {text: Number of Items}
+  type: Label
+  layout_properties: {grid_position: 'GGZNES,GRDNLT'}
+- name: label_6
+  properties: {}
+  type: Label
+  layout_properties: {grid_position: 'GGZNES,LKIHIR'}
+  data_bindings:
+  - {property: text, code: 'self.item[''numberofitem'']', writeback: false}
+- name: label_7
+  properties: {text: Picture}
+  type: Label
+  layout_properties: {grid_position: 'GGZNES,RPDUZI'}
+- name: image_1
+  properties: {height: '50'}
+  type: Image
+  layout_properties: {grid_position: 'GGZNES,SQABHV'}
+  data_bindings:
+  - {property: source, code: 'self.item[''file'']', writeback: false}

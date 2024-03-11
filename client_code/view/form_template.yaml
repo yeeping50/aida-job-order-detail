@@ -14,11 +14,15 @@ components:
     layout_properties: {grid_position: 'VGSDDD,RDXDEY'}
     components:
     - name: label_2
-      properties: {text: Aida Job Order Listing}
+      properties: {text: Aida Job Order Listing, bold: true, font_size: 24}
       type: Label
       layout_properties: {grid_position: 'XBARBO,TQPBLT'}
       data_bindings:
       - {property: text, code: 'self.item[''jobordernumber'']', writeback: false}
+    - name: repeating_panel_1
+      properties: {item_template: view.ItemTemplate1}
+      type: RepeatingPanel
+      layout_properties: {grid_position: 'QEMCFK,EMKNRJ'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
