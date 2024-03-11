@@ -30,6 +30,7 @@ components:
       layout_properties: {grid_position: 'WXMSAT,PLTQMU'}
       data_bindings:
       - {property: tag, code: 'self.item[''jobordernumber'']', writeback: false}
+      - {property: placeholder, code: 'self.item[''jobordernumber'']', writeback: false}
     - name: label_4
       properties: {text: Job Order Status}
       type: Label
@@ -38,6 +39,8 @@ components:
       properties: {}
       type: TextBox
       layout_properties: {grid_position: 'HSMQPL,THEMCA'}
+      data_bindings:
+      - {property: placeholder, code: 'self.item[''joborderstatus'']', writeback: false}
     - name: label_6
       properties: {text: Number of items}
       type: Label
@@ -46,6 +49,8 @@ components:
       properties: {}
       type: TextBox
       layout_properties: {grid_position: 'YQYVQE,QLMKPC'}
+      data_bindings:
+      - {property: placeholder, code: 'self.item[''numberofitem'']', writeback: false}
     - name: label_8
       properties: {text: Number of item kitted}
       type: Label
@@ -54,6 +59,8 @@ components:
       properties: {}
       type: TextBox
       layout_properties: {grid_position: 'UWLDOH,KLOIRU'}
+      data_bindings:
+      - {property: placeholder, code: 'self.item[''kitted'']', writeback: false}
     - name: label_10
       properties: {text: Percentage kitted}
       type: Label
@@ -71,6 +78,8 @@ components:
       type: FileLoader
       layout_properties: {grid_position: 'OPXSAC,JICQMI'}
       event_bindings: {change: file_loader_1_change}
+      data_bindings:
+      - {property: text, code: 'self.item[''file'']', writeback: false}
     - name: button
       properties: {text: submit, role: outlined-button}
       type: Button

@@ -5,14 +5,14 @@ import anvil.server
 from datetime import datetime
 
 @anvil.server.callable
-def add_form1(jobordernumber,joborderstatus,numberofitem,kitted,percentage,file):
+def add_form1(jobordernumber,joborderstatus,numberofitem,kitted):
   app_tables.table1.add_row(
     jobordernumber=jobordernumber,
     joborderstatus=joborderstatus, 
     numberofitem=numberofitem,
     kitted=kitted,
-    percentage=(kitted/numberofitem)*100, 
-    file = file
+    #percentage=str(kitted/numberofitem), 
+    #file = file
   )
 @anvil.server.callable
 def get_joborder():
