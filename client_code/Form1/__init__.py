@@ -9,7 +9,7 @@ class Form1(Form1Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.repeating_panel_employees.items = anvil.server.call('get_joborder')
+
 
   def file_loader_1_change(self, file, **event_args):
     file = self.file_loader_1
