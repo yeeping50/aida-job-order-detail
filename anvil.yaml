@@ -3,7 +3,7 @@ services:
 - source: /runtime/services/tables.yml
   client_config: {}
   server_config: {}
-startup: {type: form, module: Form1}
+startup: {type: form, module: view}
 package_name: Aida_Job_Order_Detail
 allow_embedding: false
 name: Aida Job Order Detail

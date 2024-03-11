@@ -41,3 +41,8 @@ components:
   layout_properties: {grid_position: 'GGZNES,SQABHV'}
   data_bindings:
   - {property: source, code: 'self.item[''file'']', writeback: false}
+- name: button_1
+  properties: {text: edit}
+  type: Button
+  layout_properties: {grid_position: 'GGZNES,SOMYMX'}
+  event_bindings: {click: button_1_click}
