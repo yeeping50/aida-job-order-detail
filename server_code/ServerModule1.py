@@ -17,3 +17,12 @@ def add_form1(jobordernumber,joborderstatus,numberofitem,kitted,percentage,file)
 @anvil.server.callable
 def get_joborder():
   return app_tables.table1.search()
+
+@anvil.server.callable
+def update_article(article, article_dict):
+  # check that the article given is really a row in the ‘articles’ table
+  if app_tables.table1.has_row(article):
+    article_dict['updated'] = datetime.now()
+    article.update(**article_dict)
+  else:
+    raise Exception("Article does not exist")

@@ -6,10 +6,12 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 from ...Form1 import Form1
 
-class ItemTemplate1():
+class ItemTemplate1(ItemTemplate1Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+
+    # Any code you write here will run before the form opens.
 
   def button_1_click(self, **event_args):
     # Create a copy of the existing article from the Data Table 
@@ -24,7 +26,7 @@ class ItemTemplate1():
     )
     # Update the article if the user clicks save
     if save_clicked:
-      anvil.server.call('add_form1', self.item, article_copy)
+      anvil.server.call('update_article', self.item, article_copy)
 
       # Now refresh the page
       self.refresh_data_bindings()
